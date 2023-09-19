@@ -19,9 +19,6 @@ def clear():
 madeby = "Made by https://github.com/0x1F608"
 
 clear()
-#print("-------------------------------------------------------")
-#print(Colorate.Horizontal(Colors.blue_to_cyan, "       0x1F608 super awesome webhook spammer!!"))
-#print("-------------------------------------------------------\n")
 print(Colorate.Horizontal(Colors.blue_to_cyan, f"""   ____      ______________ ____  ____                                                   
   / __ \_  _<  / ____/ ___// __ \( __ )   _________  ____ _____ ___  ____ ___  ___  _____
  / / / / |/_/ / /_  / __ \/ / / / __  |  / ___/ __ \/ __ `/ __ `__ \/ __ `__ \/ _ \/ ___/
@@ -66,7 +63,7 @@ start_time = time.time()
 def spamwebhook():
     global goodreqs, failedreqs
     
-    currenttime = time.strftime("%H:%M", time.localtime())  # Get current time here
+    currenttime = time.strftime("%H:%M", time.localtime()) 
     time.sleep(sleep)
     response = requests.post(webhook, data=data)
     if response.status_code == 200:
